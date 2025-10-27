@@ -38,7 +38,7 @@ class Deck:
 		print(f"Score for {self.name}: Correct = {self.correct}, incorrect = {self.incorrect}")
 
 
-class FlushcardApp: 
+class FlashcardApp: 
 	## Main App to manage multiple decks......
 
 	def __init__ (self, save_file = "flashcard.json"):
@@ -84,7 +84,7 @@ class FlushcardApp:
 
 
 
-app = FlushcardApp()
+app = FlashcardApp()
 app.add_deck("Math")
 app.add_card_to_deck("Math", "15 - 6", "9")
 app.add_card_to_deck("Math", "20 - 6", "14")
@@ -97,6 +97,7 @@ app.add_card_to_deck("science", "What gas do plants absorb from the atmosphere f
 
 
 app.play_deck("Math")
+app.play_deck("science")
 
 app.save()
 
